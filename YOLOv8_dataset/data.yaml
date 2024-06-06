@@ -1,0 +1,7 @@
+
+    train: C:\Users\dhshs\Documents\해양 침적 쓰레기 이미지\YOLOv8_dataset\train\images
+    val: C:\Users\dhshs\Documents\해양 침적 쓰레기 이미지\YOLOv8_dataset\val\images
+
+    nc: 5
+    names: ['타이어', '통발류', '어망류', '나무', '로프']
+    
