@@ -1,0 +1,44 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.2",
+    "heartbeatAt": "2024-06-07T10:50:38.886080",
+    "startedAt": "2024-06-07T10:50:38.158055",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/YunSeoHwan/DL_Programming.git",
+        "commit": "439c19ed20745301c2891d9d9fe632e7d3af6a80"
+    },
+    "email": "dbstjghks@naver.com",
+    "root": "C:/Users/User/OneDrive/\ubc14\ud0d5 \ud654\uba74/DL/DL_Programming",
+    "host": "DESKTOP-PUMQHRD",
+    "username": "User",
+    "executable": "c:\\Users\\User\\anaconda3\\envs\\deeplearning\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2496.0,
+        "min": 0.0,
+        "max": 2496.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2496.0,
+            "min": 0.0,
+            "max": 2496.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 469.3012046813965,
+            "used": 315.48940658569336
+        }
+    },
+    "memory": {
+        "total": 15.730640411376953
+    }
+}
