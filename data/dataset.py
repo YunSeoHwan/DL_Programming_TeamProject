@@ -26,7 +26,7 @@ class CustomDataset(Dataset):
             'bundle of ropes': 4
         }
 
-    def parse_bbox_xml(self, xml_file):
+    def parse_bbox_xml(self, xml_file, image_width, image_height):
         tree = ET.parse(xml_file)
         root = tree.getroot()
 
@@ -40,12 +40,18 @@ class CustomDataset(Dataset):
                 continue
 
             bbox = obj.find('bndbox')
-            xmin = float(bbox.find('xmin').text)
-            ymin = float(bbox.find('ymin').text)
-            xmax = float(bbox.find('xmax').text)
-            ymax = float(bbox.find('ymax').text)
+            xmin = float(bbox.find('xmin').text) / image_width
+            ymin = float(bbox.find('ymin').text) / image_height
+            xmax = float(bbox.find('xmax').text) / image_width
+            ymax = float(bbox.find('ymax').text) / image_height
 
-            boxes.append([xmin, ymin, xmax, ymax])
+            # 바운딩 박스의 중심점과 너비, 높이 계산
+            x_center = (xmin + xmax) / 2
+            y_center = (ymin + ymax) / 2
+            width = xmax - xmin
+            height = ymax - ymin
+
+            boxes.append([x_center, y_center, width, height])
             labels.append(label)
 
         # 객체가 1개만 있는 경우만 반환
@@ -58,11 +64,12 @@ class CustomDataset(Dataset):
         img_file = self.data_images[idx]
         img_path = os.path.join(self.image_dir, img_file)
         image = Image.open(img_path).convert("RGB")
+        image_width, image_height = image.size
 
         # xml 파일 경로 찾기
         xml_file = os.path.join(self.bbox_dir, img_file.replace('.jpg', '.xml'))
 
-        boxes, labels = self.parse_bbox_xml(xml_file)
+        boxes, labels = self.parse_bbox_xml(xml_file, image_width, image_height)
         
         # boxes 또는 labels가 None이면 다음 데이터로 넘어감
         if boxes is None or labels is None:
@@ -108,3 +115,42 @@ def collate_fn(batch):
     images, labels, boxes = zip(*batch)
     images = torch.stack(images, 0)
     return images, labels, boxes
+
+# 저장할 경로
+image_dir_train = 'train/images/'
+bbox_dir_train = 'train/bbox/'
+
+image_dir_val = 'validation/images/'
+bbox_dir_val = 'validation/bbox/'
+
+image_dir_test = 'test/images/'
+bbox_dir_test = 'test/bbox/'
+
+# 라벨 파일 생성 및 저장
+def save_label_file(image_file, labels, boxes, output_dir):
+    label_file = image_file.replace('.jpg', '.txt')
+    with open(os.path.join(output_dir, label_file), 'w') as f:
+        for label, box in zip(labels, boxes):
+            x_center, y_center, width, height = box
+            line = f"{label} {x_center} {y_center} {width} {height}\n"
+            f.write(line)
+
+def save_label_files(dataset, image_dir, bbox_dir, output_dir):
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    for idx in range(len(dataset)):
+        image, labels, boxes = dataset[idx]
+        image_file = dataset.data_images[idx]
+        save_label_file(image_file, labels, boxes, output_dir)
+
+# train set
+train_dataset = make_dataset(image_dir_train, bbox_dir_train)
+save_label_files(train_dataset, image_dir_train, bbox_dir_train, 'train/labels')
+
+# validation set
+val_dataset = make_dataset(image_dir_val, bbox_dir_val)
+save_label_files(val_dataset, image_dir_val, bbox_dir_val, 'validation/labels')
+
+# test set
+test_dataset = make_dataset(image_dir_test, bbox_dir_test)
+save_label_files(test_dataset, image_dir_test, bbox_dir_test, 'test/labels')
