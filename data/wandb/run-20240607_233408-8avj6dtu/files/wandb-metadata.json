@@ -1,0 +1,92 @@
+{
+    "os": "Linux-6.5.0-28-generic-x86_64-with-glibc2.35",
+    "python": "3.10.14",
+    "heartbeatAt": "2024-06-07T14:34:09.149567",
+    "startedAt": "2024-06-07T14:34:08.385967",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/mnt/ddrive/team1/DL/DL_Programming/data/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "data/train.py",
+    "git": {
+        "remote": "https://github.com/YunSeoHwan/DL_Programming.git",
+        "commit": "c2b4919d0f0acf6a18a89bf3db180bf25f009d68"
+    },
+    "email": "dbstjghks@naver.com",
+    "root": "/mnt/ddrive/team1/DL/DL_Programming",
+    "host": "server1aiaas",
+    "username": "team1",
+    "executable": "/home/team1/anaconda3/envs/team1/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2537.2428749999995,
+        "min": 800.0,
+        "max": 3000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2599.954,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2900.707,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2600.012,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2600.366,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2599.965,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2900.0,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2599.996,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2600.008,
+            "min": 800.0,
+            "max": 3000.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 456.8854446411133,
+            "used": 148.56892013549805
+        }
+    },
+    "gpu": "NVIDIA TITAN Xp",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA TITAN Xp",
+            "memory_total": 12884901888
+        },
+        {
+            "name": "NVIDIA TITAN Xp",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 30.976303100585938
+    }
+}

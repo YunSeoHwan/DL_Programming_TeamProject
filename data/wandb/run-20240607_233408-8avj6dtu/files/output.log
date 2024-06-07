@@ -1,0 +1,145 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [39m[22mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [39m[22mchecks passed ✅
+WARNING ⚠️ updating to 'imgsz=512'. 'train' and 'val' imgsz must be an integer, while 'predict' and 'export' imgsz may be a [h, w] list or an integer, i.e. 'yolo export imgsz=640,480' or 'yolo export imgsz=640'
+
+
+[34m[1mtrain: [39m[22mScanning /mnt/ddrive/team1/DL/DL_Programming/data/train/labels... 8215 images, 0 backgrounds, 31 corrupt:  98%|█████████▊| 8215/8421 [00:05<00:00, 1373.27it/s]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_009_00046.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0048      1.0029]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_010_00326.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0011      1.0029]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_010_00359.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0021]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_042_01171.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0011]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_042_07627.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0011]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_042_08641.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0023]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_045_00639.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0018]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_045_03356.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_045_03487.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_045_03530.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_046_04100.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0011      1.0018]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/bundle of ropes_048_03584.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0023]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/circular fish trap_004_02328.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0018]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/fish net_004_00817.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0004]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/fish net_004_02354.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0004]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/fish net_004_03018.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0004]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/fish net_004_03545.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0005      1.0004]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/fish net_004_04351.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0004]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/fish net_029_02342.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.2064       1.279]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/rope_045_01626.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/rope_045_01663.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0018]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/rope_045_02420.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0018]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/spring fish trap_029_01799.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0011]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/spring fish trap_029_01907.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/spring fish trap_044_06201.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0007]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/tire_004_00418.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0018]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/tire_045_00547.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0018]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/tire_045_02135.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0062]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/tire_045_03539.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/tire_045_04412.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0062]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/wood_047_03039.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0018]
+[34m[1mtrain: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/train/images/wood_048_04596.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0023]
+[34m[1mtrain: [39m[22mNew cache created: /mnt/ddrive/team1/DL/DL_Programming/data/train/labels.cache
+[34m[1mtrain: [39m[22mScanning /mnt/ddrive/team1/DL/DL_Programming/data/train/labels... 8421 images, 0 backgrounds, 32 corrupt: 100%|██████████| 8421/8421 [00:05<00:00, 1492.33it/s]
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.8 (you have 1.4.7). Upgrade using: pip install --upgrade albumentations
+[34m[1mval: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/validation/images/bundle of ropes_045_02766.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0018]
+[34m[1mval: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/validation/images/fish net_004_01515.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0004]
+[34m[1mval: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/validation/images/spring fish trap_045_04682.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0002]
+[34m[1mval: [39m[22mWARNING ⚠️ /mnt/ddrive/team1/DL/DL_Programming/data/validation/images/tire_042_09867.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+[34m[1mval: [39m[22mScanning /mnt/ddrive/team1/DL/DL_Programming/data/validation/labels.cache... 2406 images, 0 backgrounds, 4 corrupt: 100%|██████████| 2406/2406 [00:00<?, ?it/s]
+Plotting labels to runs/detect/train2/labels.jpg...
+[34m[1moptimizer:[39m[22m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[39m[22m AdamW(lr=0.001111, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.001), 63 bias(decay=0.0)
+[34m[1mTensorBoard: [39m[22mmodel graph visualization added ✅
+Image sizes 512 train, 512 val
+Using 8 dataloader workers
+Logging results to [1mruns/detect/train2
+Starting training for 100 epochs...
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      1/100        12G      1.036      2.515      1.377        189        512: 100%|██████████| 66/66 [01:30<00:00,  1.36s/it]
+
+
+
+
+
+
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [00:15<00:00,  1.56s/it]
+                   all       2402       2402      0.667      0.353      0.402      0.277
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+
+
+      2/100      11.8G      1.039      1.859      1.347        345        512:   9%|▉         | 6/66 [00:06<01:02,  1.04s/it]
+Traceback (most recent call last):
+  File "/mnt/ddrive/team1/DL/DL_Programming/data/train.py", line 32, in <module>
+    main()
+  File "/mnt/ddrive/team1/DL/DL_Programming/data/train.py", line 29, in main
+    model.train(data=data, epochs=epochs, patience=patience, batch=batch, imgsz=imgsz, device=device)
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/ultralytics/engine/model.py", line 674, in train
+    self.trainer.train()
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 199, in train
+    self._do_train(world_size)
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 383, in _do_train
+    self.optimizer_step()
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 544, in optimizer_step
+    self.scaler.step(self.optimizer)
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 452, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 349, in _maybe_opt_step
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 349, in <genexpr>
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/mnt/ddrive/team1/DL/DL_Programming/data/train.py", line 32, in <module>
+    main()
+  File "/mnt/ddrive/team1/DL/DL_Programming/data/train.py", line 29, in main
+    model.train(data=data, epochs=epochs, patience=patience, batch=batch, imgsz=imgsz, device=device)
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/ultralytics/engine/model.py", line 674, in train
+    self.trainer.train()
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 199, in train
+    self._do_train(world_size)
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 383, in _do_train
+    self.optimizer_step()
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/ultralytics/engine/trainer.py", line 544, in optimizer_step
+    self.scaler.step(self.optimizer)
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 452, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 349, in _maybe_opt_step
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+  File "/home/team1/anaconda3/envs/team1/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 349, in <genexpr>
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+KeyboardInterrupt

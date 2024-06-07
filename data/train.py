@@ -16,10 +16,10 @@ def main():
 
     # 데이터와 학습 설정
     data = 'data.yaml'
-    epochs = 50
-    patience = 10
+    epochs = 100
+    patience = 5
     batch = 128
-    imgsz = 512
+    imgsz = (512, 512)
     device = 0
 
     # 사용자 정의 트레이너 설정
