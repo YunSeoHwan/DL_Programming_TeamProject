@@ -12,7 +12,7 @@ class CustomTrainer(BaseTrainer):
 
 def main():
     # 모델 초기화
-    model = YOLO('DL_Programming/yolov8n.pt')
+    model = YOLO('../data/yolov8n.pt')
 
     # 데이터와 학습 설정
     data = 'data.yaml'

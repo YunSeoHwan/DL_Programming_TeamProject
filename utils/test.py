@@ -37,13 +37,13 @@ def draw_bounding_boxes(image, boxes):
 
 def main():
     # 모델 초기화
-    best_model = YOLO('runs/detect/train/weights/best.pt')
+    best_model = YOLO('../data/runs/detect/train/weights/best.pt')
     
     # 예측할 이미지 수 설정
     num_images = 4
     
     # test 이미지 경로
-    image_dir = 'test/images'
+    image_dir = '../data/test/images'
     image_files = [os.path.join(image_dir, f) for f in os.listdir(image_dir) if f.endswith('.jpg')][:num_images]
 
     for image_file in image_files:
